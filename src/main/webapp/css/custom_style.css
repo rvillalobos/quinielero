@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body {
+   background-image:none;   /* background gradient image - must be 100px * 1500px, .png is best */
+    background-color:#004270;              /* this colour must be set to the finishing colour (at the very bottom) of the gradient */
+    color:#363636; /* default font colour */
+
+}
+.logo /* brand logo (make sure you set the width and height too) */ {
+	background-image: none;
+	width: 226px;
+	height: 60px;
+}
+.product-logo /* product logo (should be 50px in height, width to be set below - no wider than 220px) */ {
+	background-image: url('../images/_goalNet.png');
+	width: 190px;
+	min-height: 230px;
+}
+
+.primary {
+	color: #FFF; 
+	background-color: #e76a00;
+	background-image: linear-gradient(top, #0093CB, #004270);
+}
+
