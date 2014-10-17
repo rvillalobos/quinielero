@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+
+<body>
+<script>
+    function myFunction(){
+    var password = document.getElementById("password").value;
+    var repeatpassword = document.getElementById("repeatpassword").value;
+    var n = password.localeCompare(repeatpassword);
+    if (n==0){
+        console.log("cuenta creada correctamente");
+        document.getElementById("cuentacreada").innerHTML = "Account created!";
+    }
+    else {
+        console.log("Hubo un error al crear su cuenta, presione F5 para continuar");
+        document.getElementById("cuentanocreada").innerHTML = "Passwords are different, please try again";
+    }
+}
+
+function WriteFile(){
+    var fh = fopen("c:\\MyFile.txt", 3); // Open the file for writing
+    if(fh!=-1) // If the file has been successfully opened
+    {
+        var str = "Some text goes here...";
+        fwrite(fh, str); // Write the string to a file
+        fclose(fh); // Close the file
+    }
+}
+
+WriteFile();
+
+function todo(){
+    myFunction();
+    WriteFile();
+}
+</script>
+
+</body>
+<h1>Register</h1>
+<form name="registration"></form>
+<label>Name:</label><br/>
+<input type="text" name="name"><br/>
+<label>First Name:</label><br/>
+<input type="text" name="firstname"><br/>
+<label>Last Name:</label><br/>
+<input type="text" name="lastname"><br/>
+<label>Male or female?</label><br/>
+<input type="radio" name="sex" value="male">Male<br/>
+<input type="radio" name="sex" value="female">Female<br/>
+<label>Username:</label><br/>
+<input id="username" type="text" required="required"><br/>
+<label>Password:</label><br/>
+<input id="password" type="password" required="required"><br/>
+<label>Repeat Password:</label><br/>
+<input id="repeatpassword" type="password" required="required"><br/>
+<label>Email:</label><br/>
+<input name="email" type="email" required="required"><br/>
+<button onclick="todo()">Register</button>
+<div id="cuentacreada"></div>
+<div id="cuentanocreada"></div>
+</form>
+Already have an account? Login <a href>="LogInDeJonas"Login!</a>
+
+</html>
