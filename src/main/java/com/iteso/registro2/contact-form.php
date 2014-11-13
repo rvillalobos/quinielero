@@ -3,9 +3,7 @@ if(isset($_POST['submit']))
 {
 
 $message=
-'Full Name:	'.$_POST['fullname'].'<br />
-Subject:	'.$_POST['subject'].'<br />
-Phone:	'.$_POST['phone'].'<br />
+'Subject:	'.$_POST['subject'].'<br />
 Email:	'.$_POST['emailid'].'<br />
 Comments:	'.$_POST['comments'].'
 ';
@@ -24,11 +22,11 @@ Comments:	'.$_POST['comments'].'
     
     // Authentication  
     $mail->Username   = "roysupremo@gmail.com"; // Your full Gmail address
-    $mail->Password   = "deoxys4493"; // Your Gmail password
+    $mail->Password   = ""; // Your Gmail password
       
     // Compose
-    $mail->SetFrom($_POST['emailid'], $_POST['fullname']);
-    $mail->AddReplyTo($_POST['emailid'], $_POST['fullname']);
+    $mail->SetFrom($_POST['emailid']);
+    $mail->AddReplyTo($_POST['emailid']);
     $mail->Subject = "New Contact Form Enquiry";      // Subject (which isn't required)  
     $mail->MsgHTML($message);
  
@@ -47,24 +45,19 @@ Comments:	'.$_POST['comments'].'
 <body>
 					
 		<div style="margin: 100px auto 0;width: 300px;">
-			<h3>Contact Form</h3>
+			<h3>Invite a Friend!</h3>
 			<form name="form1" id="form1" action="" method="post">
 					<fieldset>
-					  <input type="text" name="fullname" placeholder="Full Name" />
-					  <br />
-					  <input type="text" name="subject" placeholder="Subject" />
-					  <br />
-					  <input type="text" name="phone" placeholder="Phone" />
+					  <input type="text" name="subject" placeholder="Subject" value="Join my Quinielero!" />
 					  <br />
 					  <input type="text" name="emailid" placeholder="Email" />
 					  <br />
-					  <textarea rows="4" cols="20" name="comments" placeholder="Comments"></textarea>
+					  <textarea rows="10" cols="30" name="comments" placeholder="Comments"></textarea>
 					  <br />
 					  <input type="submit" name="submit" value="Send" />
 					</fieldset>
 			</form>
 			<p><?php if(!empty($message)) echo $message; ?></p>
 		</div>
-					
 </body>
 </html>
