@@ -54,7 +54,7 @@ public class LoginServlet extends HttpServlet {
 
                         out.println("<html>");
                         out.println("<head><title>Valid user and password</title></head>");
-                        out.println("<body>");
+                        out.println("<body>");     
                         out.println("<h1> Dummy page </h1>");
                         // Echo client's request information
                         out.println("<p>Welcome, " + unsecureUserName + "</p>");
