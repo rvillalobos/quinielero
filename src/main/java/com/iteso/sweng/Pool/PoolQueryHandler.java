@@ -17,7 +17,7 @@ public abstract class PoolQueryHandler {
      * Places a query to the database and retrieves all the team's names
      * stored in the database.
      * @return The list of teams stored in the database, null if no team found.
-     */
+     */     
     public abstract ArrayList<Team> getAvailableTeams();
 
     /**
