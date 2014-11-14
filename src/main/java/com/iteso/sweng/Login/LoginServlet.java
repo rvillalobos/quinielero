@@ -1,7 +1,10 @@
 package com.iteso.sweng.Login;
 
+import com.iteso.sweng.Pool.LeavePool;
+
 import javax.servlet.http.*;
 import java.io.PrintWriter;
+import java.sql.ResultSet;
 
 /**
  * User: Jonas
@@ -42,14 +45,28 @@ public class LoginServlet extends HttpServlet {
                 case VALID_USER_AND_PASSWORD:
                     // Write the response message, in an HTML page
                     try {
+
+
+                        LeavePool lp = new LeavePool();
+                        lp.DeleteUserFromPool("sebas","pool_10");
+
+
+
                         out.println("<html>");
                         out.println("<head><title>Valid user and password</title></head>");
-                        out.println("<body>");
+                        out.println("<body>");     
                         out.println("<h1> Dummy page </h1>");
                         // Echo client's request information
                         out.println("<p>Welcome, " + unsecureUserName + "</p>");
+
+
                         out.println("<p>Verification Number: <strong>" + Math.random() + "</strong></p>");
+
                         out.println("</body></html>");
+
+
+
+
                     } finally {
                         out.close();  // Always close the output writer
                     }
