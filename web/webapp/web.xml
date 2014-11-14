@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="3.0"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+    <!-- To save as "hello\WEB-INF\web.xml" -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.iteso.sweng.Login.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>HelloWorld</servlet-name>
+        <servlet-class>com.iteso.sweng.HelloWorldMessageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MyHelloWorld</servlet-name>
+        <servlet-class>com.iteso.sweng.MyHelloServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SampleHellowWorld</servlet-name>
+        <servlet-class>HelloWorldExample</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>EditTeams</servlet-name>
+        <servlet-class>com.iteso.sweng.Pool.EditTeamsServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SaveTeamsServlet</servlet-name>
+        <servlet-class>com.iteso.sweng.Pool.SaveTeamsServlet</servlet-class>
+    </servlet>
+    <!-- Note: All <servlet> elements MUST be grouped together and
+          placed IN FRONT of the <servlet-mapping> elements -->
+
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/sayhello</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>MyHelloWorld</servlet-name>
+        <url-pattern>/mySayhello</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SampleHellowWorld</servlet-name>
+        <url-pattern>/sampleHello</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>EditTeams</servlet-name>
+        <url-pattern>/EditTeams</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SaveTeamsServlet</servlet-name>
+        <url-pattern>/SaveTeamsServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
