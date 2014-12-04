@@ -47,11 +47,6 @@ public class LoginServlet extends HttpServlet {
                     try {
 
 
-                        LeavePool lp = new LeavePool();
-                        lp.DeleteUserFromPool("sebas","pool_10");
-
-
-
                         out.println("<html>");
                         out.println("<head><title>Valid user and password</title></head>");
                         out.println("<body>");     
