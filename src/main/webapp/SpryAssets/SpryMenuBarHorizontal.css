@@ -13,6 +13,7 @@
 /* The outermost container of the Menu Bar, an auto width box with no margin or padding */
 ul.MenuBarHorizontal
 {
+	margin: 0;
 	padding: 0;
 	list-style-type: none;
 	font-size: 100%;
@@ -21,7 +22,7 @@ ul.MenuBarHorizontal
 	margin-top: 100px; 
 	margin-right: 0;
 	margin-bottom: 0;
-	margin-left:380px;
+	margin-left:300px;
 }
 /* Set the active Menu Bar with this class, currently setting z-index to accomodate IE rendering bug: http://therealcrisp.xs4all.nl/meuk/IE-zindexbug.html */
 ul.MenuBarActive
@@ -97,13 +98,11 @@ ul.MenuBarHorizontal a
 	padding: 0.5em 0.75em;
 	color: #FFF;
 	text-decoration: none;
-	
-	
 }
 /* Menu items that have mouse over or focus have a blue background and white text */
 ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
 {
-	background-color: #33C;
+	background-color: #CCC;
 	color: #FFF;
 }
 /* Menu items that are open with submenus are set to MenuBarItemHover with a blue background and white text */
