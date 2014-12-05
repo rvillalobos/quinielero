@@ -6,10 +6,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Reset Password</title>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<form action="validateUserAndEmailServlet" method="post">
 		<center>
+			<ul id="MenuBar1" class="MenuBarHorizontal">
+			  <li><a href="#">Main Page</a>		      </li>
+			  <li><a href="#">Teams</a></li>
+			  <li><a href="#">Pools</a>		      </li>
+			  <li><a href="../../Qunielero_P1/web/FAQ.html">FAQ</a></li>
+		  </ul>
+			<p>&nbsp;</p>
 			<table class="title">
 				<tr>
 					<th>Reset password</th>
@@ -35,5 +44,8 @@
 			</tr>
 		</table>
 	</form>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+    </script>
 </body>
 </html>
