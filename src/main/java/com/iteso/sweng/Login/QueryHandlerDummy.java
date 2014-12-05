@@ -98,7 +98,7 @@ public class QueryHandlerDummy extends QueryHandler{
 		else
 		{
 			// Return Exception
-			throw new InvalidName("User name does not exists");
+			throw new InvalidName("User name does not exist");
 		}
 	}
 	
@@ -108,4 +108,20 @@ public class QueryHandlerDummy extends QueryHandler{
 		}
 		return null;
 	}
+
+
+    public boolean getEmailNotificationConfiguration(String userName){
+        return true;
+    }
+
+    @Override
+    public void removeEmailNotifications(String userName) {
+        /* Do nothing */
+    }
+
+    @Override
+    public void activeEmailNotifications(String userName) {
+        /* Do nothing */
+    }
+
 }
