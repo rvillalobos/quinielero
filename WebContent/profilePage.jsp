@@ -5,20 +5,30 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Profile page</title>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
 </head>
 <%@page import="com.iteso.sweng.Login.UsersBean" %>
 <% 
 	UsersBean u = (UsersBean) session.getAttribute("userInformation");
 %> 
 <body>
+<p>&nbsp;</p>
+	<ul id="MenuBar1" class="MenuBarHorizontal">
+	  <li><a href="#">Main Page</a>      </li>
+	  <li><a href="#">Teams</a></li>
+	  <li><a href="#">Pools</a>      </li>
+	  <li><a href="#">FAQ</a></li>
+</ul>
+	<p>&nbsp;</p>
 	<table>
 		<tr>
 			<td><img src= <%out.print(" "+ u.getPhoto()+ " ");%>  id="photo"
 				name="photo"></td>
-		</tr>
-	</table>
+	  </tr>
+</table>
 
-	<table>
+<table>
 		<tr>
 			<td><strong>Name: </strong></td>
 			<td><%=u.getUserName() %></td>
@@ -54,7 +64,8 @@
 			<td> <a href="modifyProfilePage.jsp">Modify my profile data</a> </td>
 		</tr>
 	</table>
-
-
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+    </script>
 </body>
 </html>
